@@ -7,9 +7,41 @@
     body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
     ol,ul,li{margin:0;padding:0;list-style:none;}
     img{border:none;vertical-align:top;}
+    #box{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+    #bar{
+      position: absolute;
+      margin-left: -5px;
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      background-color: #f66;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
-
+  <div id="box">
+    <i id="bar"></i>
+  </div>
 </body>
+<script>
+  var deg =0,
+      r=200;
+  function circle() {
+      var _left = r+Math.cos(Math.PI / 180 *deg)*r,
+          _top =r - Math.sin(Math.PI /180 *deg)*r;
+      deg++;
+      bar.style.left = _left+"px";
+      bar.style.top = _top+"px";
+
+  }
+  setInterval(circle,1000/60);
+</script>
 </html>
