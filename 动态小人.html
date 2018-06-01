@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;vertical-align:top;}
+    #box{
+      width: 143px;
+      height: 278px;
+      margin: 100px auto;
+      border: 1px solid red;
+      background:url("images/1.jpg") no-repeat 0 0 ;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+</body>
+<script>
+  var oBox = document.getElementById("box");
+  var i=0;
+  var j=0;
+  // setInterval(function () {
+  //     oBox.style.backgroundPosition = i*143+"px 0";
+  //     i--;
+  //     i %=9;//执行9次返回0
+  // },2000/9)
+
+  // (function run() {
+  //     oBox.style.backgroundPosition = i*143+"px 0";
+  //     i--;
+  //     i %=9;//执行9次返回0
+  //     j++;
+  //     if (j<10){
+  //         var a =setTimeout(run,1000/9);//这样就只能执行10次
+  //     }
+  // })();
+  // (function run() {
+  //     oBox.style.backgroundPosition = i*143+"px 0";
+  //     i--;
+  //     i %=9;//执行9次返回0
+  //     j++;
+  //     var a=setTimeout(run,1000/9);
+  //     if (j>=10){
+  //       clearInterval(a);
+  //     }
+  // })();
+</script>
+</html>
