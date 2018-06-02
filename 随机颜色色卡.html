@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;vertical-align:top;}
+    ul{
+      width: 1300px;
+      height: 50px;
+      margin: 50px auto;
+      border:1px solid #000;
+    }
+    ul li{
+      float: left;
+      width: 130px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</body>
+<script>
+  var oLis =document.getElementsByTagName("li");
+  var str="";
+  var i=0;
+  setInterval(function () {
+          str = `rgba(${Math.ceil(Math.random()*255)},${Math.ceil(Math.random()*255)},${Math.ceil(Math.random()*255)},${Math.random().toFixed(1)})`;
+
+          oLis[i].style.backgroundColor = str;
+          oLis[i].innerText = str;
+          i++;
+          if(i>10){
+              clearInterval(1);
+          }
+
+  },1000)
+</script>
+</html>
