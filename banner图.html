@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;vertical-align:top;}
+    #wrap{
+      position: relative;
+      overflow: hidden;
+      width: 990px;
+      height: 460px;
+      margin: 50px auto;
+    }
+    ul{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3960px;
+    }
+    ul li{
+      float: left;
+      width: 990px;
+    }
+    ul li img{
+      width: 990px;
+      height: 460px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <ul>
+      <li><img src="images/banner1.jpg" alt=""></li>
+      <li><img src="images/banner2.jpg" alt=""></li>
+      <li><img src="images/banner3.jpg" alt=""></li>
+      <li><img src="images/banner4.jpg" alt=""></li>
+    </ul>
+  </div>
+</body>
+<script>
+  var oUl= document.getElementsByTagName("ul")[0];
+  var oLeft =0;
+  setInterval(function () {
+      oUl.style.left =`${oLeft}px`;
+      oLeft =oLeft  -990;
+      if (oLeft<=-3960){
+          oLeft =0;
+      }
+  },1000)
+</script>
+</html>
