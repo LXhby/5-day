@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;vertical-align:top;}
+    div{
+      width: 200px;
+      height: 100px;
+      margin: 50px auto;
+      border: 1px dashed #000;
+      line-height: 100px;
+      text-align: center;
+    }
+    div span{
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <div>页面在<span>5</span>s后实现跳转</div>
+</body>
+<script>
+  var oSpan =document.getElementsByTagName("span")[0];
+  var num =5;
+  setInterval(function () {
+      num--;
+     oSpan.innerText =num;
+     if (num<=0){
+         clearInterval(1);
+         window.location.href ="https://www.baidu.com";
+     }
+  },1000)
+
+</script>
+</html>
