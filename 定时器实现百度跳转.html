@@ -26,14 +26,23 @@
 <script>
   var oSpan =document.getElementsByTagName("span")[0];
   var num =5;
-  setInterval(function () {
+  // setInterval(function () {//方法一
+  //     num--;
+  //    if (num<=0){
+  //        clearInterval(1);
+  //        window.location.href ="https://www.baidu.com";
+  //    }else{
+  //        oSpan.innerText =num;
+  //    }
+  // },1000)
+  (function jumpUrl() {
       num--;
-     oSpan.innerText =num;
-     if (num<=0){
-         clearInterval(1);
-         window.location.href ="https://www.baidu.com";
-     }
-  },1000)
-
+      if (num<=0){
+          window.location.href ="https://www.baidu.com";
+      }else{
+          oSpan.innerText =num;
+          setTimeout(jumpUrl,1000);
+      }
+  })();
 </script>
 </html>
