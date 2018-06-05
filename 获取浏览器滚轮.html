@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+    ol,ul,li{margin:0;padding:0;list-style:none;}
+    img{border:none;vertical-align:top;}
+    ul{
+      width: 50px;
+      margin: 2000px auto;
+    }
+    li{
+      height: 50px;
+      border: 1px solid;
+      line-height: 50px;
+      text-align: center;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <ul class="btn1">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li class="btn">^</li>
+    </ul>
+</body>
+<script>
+    var btn =document.getElementsByClassName("btn")[0];
+    // btn.onclick = function () {
+    //    document.documentElement.scrollTop =0;
+    // }
+  function oTop() {
+      clearTimeout(1);//为了避免出现点击多次速度越来越快
+      if (document.documentElement.scrollTop>0){
+          document.documentElement.scrollTop -=10;
+          setTimeout(oTop,1000);
+      }
+  }
+  btn.onclick =oTop;
+</script>
+</html>
